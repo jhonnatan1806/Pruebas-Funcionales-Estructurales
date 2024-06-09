@@ -2,8 +2,9 @@
 
 ## Ejercicio 1
 
-:question: **Escribe el código de prueba y considera las entradas str = "axcaycazc", open = "a" y close
-= "c" y explica lo que hace el código anterior.**
+:question: **Pregunta**
+
+Escribe el código de prueba y considera las entradas str = "axcaycazc", open = "a" y close = "c" y explica lo que hace el código anterior.
 
 ```java
     public static  final String[] EMPTY_STRING_ARRAY = new String[0];
@@ -46,8 +47,8 @@
 
 :white_check_mark: **Respuesta**
 
-El código anterior es una implementación del método `substringBetween()` que recibe una cadena de texto y dos caracteres, `open` y `close`, 
-y devuelve un array de cadenas de texto que están entre los caracteres `open` y `close` en la cadena de texto. 
+El código anterior es una implementación del método `substringBetween()` que recibe una cadena de texto y dos caracteres, `open` y `close`,
+y devuelve un array de cadenas de texto que están entre los caracteres `open` y `close` en la cadena de texto.
 El método recorre la cadena de texto y busca las ocurrencias de `open` y `close` para extraer las subcadenas que están entre ellos.
 
 ```java
@@ -59,36 +60,37 @@ El método recorre la cadena de texto y busca las ocurrencias de `open` y `close
 
 ## Ejercicio 2
 
-:question: **Revisa los requisitos una vez más y escribe todos los casos de prueba que se te ocurran.
+:question: **Pregunta**
+
+Revisa los requisitos una vez más y escribe todos los casos de prueba que se te ocurran.
 El formato no importa, puede ser algo así como "todos los parámetros son nulos". Cuando hayas
 terminado con esta nota, compara tu conjunto de pruebas inicial con el que estamos a punto de
-derivar.**
+derivar.
 
 **Paso 1: Comprensión de los requisitos, entradas y salidas**
 
 Para el método substringsBetween():
 
-- El objetivo de este método es recopilar todas las subcadenas en una cadena que están 
-delimitadas por una etiqueta open y una etiqueta close (el usuario las proporciona). 
-- El programa recibe tres parámetros: 
-    + str, que representa la cadena de la que el programa extraerá las subcadenas 
-    + La etiqueta open, que indica el inicio de una subcadena 
-    + La etiqueta close, que indica el final de la subcadena 
-- El programa devuelve un arreglo compuesto por todas las subcadenas encontradas por el 
+- El objetivo de este método es recopilar todas las subcadenas en una cadena que están
+delimitadas por una etiqueta open y una etiqueta close (el usuario las proporciona).
+- El programa recibe tres parámetros:
+  - str, que representa la cadena de la que el programa extraerá las subcadenas
+  - La etiqueta open, que indica el inicio de una subcadena
+  - La etiqueta close, que indica el final de la subcadena
+- El programa devuelve un arreglo compuesto por todas las subcadenas encontradas por el
 programa.
-
 
 **Paso 2: Explora lo que hace el programa para varias entradas**
 
-- Pasa la cadena "abcd" con la etiqueta open "a" y la etiqueta close "d". Se espera que devuelva un 
-arreglo con un solo elemento: ["bc"]. Intenta eso (en una prueba unitaria), y el programa devuelve 
-lo que se esperaba. 
-- A continuación, vemos qué sucede si hay varias subcadenas en la cadena principal. Pasa la cadena 
-"abcdabcdab" con las mismas etiquetas de open y close. Se espera que devuelva un arreglo con dos 
-cadenas: ["bc", "bc"]. El programa devuelve lo que se esperaba. 
-- Se espera que el programa se comporte de la misma manera con etiquetas open y close más 
-grandes que un solo carácter. Repite la segunda prueba, doblando las “a”s y las “d”s en todos los 
-parámetros. También cambia uno de los "bc" a "bf", para que sea más fácil comprobar que el 
+- Pasa la cadena "abcd" con la etiqueta open "a" y la etiqueta close "d". Se espera que devuelva un
+arreglo con un solo elemento: ["bc"]. Intenta eso (en una prueba unitaria), y el programa devuelve
+lo que se esperaba.
+- A continuación, vemos qué sucede si hay varias subcadenas en la cadena principal. Pasa la cadena
+"abcdabcdab" con las mismas etiquetas de open y close. Se espera que devuelva un arreglo con dos
+cadenas: ["bc", "bc"]. El programa devuelve lo que se esperaba.
+- Se espera que el programa se comporte de la misma manera con etiquetas open y close más
+grandes que un solo carácter. Repite la segunda prueba, doblando las “a”s y las “d”s en todos los
+parámetros. También cambia uno de los "bc" a "bf", para que sea más fácil comprobar que el
 método devuelve dos subcadenas diferentes: ["bc", "bf"]. El programa devuelve lo que se esperaba.
 
 :white_check_mark: **Respuesta**
@@ -118,8 +120,10 @@ Casos de prueba
 
 ## Ejercicio 3
 
-:question: **Escribe un código de prueba llamado stringUtilsExploracionTest.java que albergue el
-código anterior. **
+:question: **Pregunta**
+
+Escribe un código de prueba llamado stringUtilsExploracionTest.java que albergue el
+código anterior.
 
 **Paso 3: Explora las posibles entradas y salidas, e identifica las particiones**
 
@@ -151,7 +155,9 @@ concretos.
 
 ## Ejercicio 4
 
-:question: **¿En nuestro ejemplo cuál es el número de pruebas?**
+:question: **Pregunta**
+
+¿En nuestro ejemplo cuál es el número de pruebas?
 
 Puede haber otras particiones que no necesiten combinarse por completo. En este problema hay
 dos:
@@ -163,7 +169,7 @@ close, y otra en la que no.
 open y close de diferentes longitudes de diferentes maneras, no necesitamos las cuatro
 combinaciones de (longitud de open = 1, longitud de close = 1), (longitud de open > 1,
 longitud de close = 1), (longitud de open = 1, longitud de close > 1), y (longitud de open > 1,
-longitud de close > 1). Solo (longitud de open = 1, longitud de close = 1) 
+longitud de close > 1). Solo (longitud de open = 1, longitud de close = 1)
 y (longitud de open > 1, longitud de close > 1) son suficientes.
 
 :white_check_mark: **Respuesta**
@@ -174,7 +180,9 @@ y (longitud de open > 1, longitud de close > 1) son suficientes.
 
 ## Ejercicio 5
 
-:question: **¿Encontramos más casos donde se pueda simplificar el número de pruebas?**
+:question: **Pregunta**
+
+¿Encontramos más casos donde se pueda simplificar el número de pruebas?
 
 **Cadena vacia o nula:**
 
@@ -201,6 +209,7 @@ y (longitud de open > 1, longitud de close > 1) son suficientes.
 - str contiene las etiquetas de open y close varias veces.
 
 **Cadena de longitud > 1, longitud de open > 1, longitud de close > 1:**
+
 - str no contiene ni la etiqueta de open ni la de close.
 - str contiene la etiqueta open pero no contiene la etiqueta close.
 - str contiene la etiqueta de close pero no contiene la etiqueta de open.
@@ -208,6 +217,7 @@ y (longitud de open > 1, longitud de close > 1) son suficientes.
 - str contiene las etiquetas de open y close varias veces.
 
 **La prueba para el límite:**
+
 - str contiene las etiquetas de open y close sin caracteres entre ellas.
 
 **Paso 6: Automatiza los casos de prueba**
@@ -309,7 +319,9 @@ verifican si la implementación funciona si hay espacios en blanco en la cadena.
 
 ## Ejercicio 6
 
-:question: **Escribe un archivo stringUtilsTest.java y completa el código anterior.**
+:question: **Pregunta**
+
+Escribe un archivo stringUtilsTest.java y completa el código anterior.
 
 Tómate el tiempo para revisar todos los pasos que hemos
 trabajado y luego considera esta pregunta: ¿hemos terminado?.
@@ -322,12 +334,14 @@ manera correcta.
 
 ## Ejercicio 7
 
-:question: **Modifica el método substringsBetween para manejar casos especiales adicionales y asegurar que
-todas las pruebas existentes pasen.**
+:question: **Pregunta**
+
+Modifica el método substringsBetween para manejar casos especiales adicionales y asegurar que
+todas las pruebas existentes pasen.
 
 Instrucciones:
 
-1. Modifica el método substringsBetween para que si la cadena str contiene caracteres especiales 
+1. Modifica el método substringsBetween para que si la cadena str contiene caracteres especiales
 (como *, ?, !, etc.), los ignore y solo considere letras y números para la búsqueda  de subcadenas.
 2. Asegúrate de que todas las pruebas existentes aún pasen.
 3. Escribe nuevas pruebas que validen esta funcionalidad
@@ -382,8 +396,10 @@ Pruebas para validar la funcionalidad
 
 ## Ejercicio 8
 
-:question: **Implementa excepciones personalizadas para manejar casos específicos de errores en el método
-substringsBetween.**
+:question: **Pregunta**
+
+Implementa excepciones personalizadas para manejar casos específicos de errores en el método
+substringsBetween.
 
 Instrucciones:
 
@@ -467,9 +483,9 @@ Pruebas para validar la excepción
     }
 ```
 
-## Ejercicio 9
+## Ejercicio 9: Implementación de un método alternativo
 
-:question: **Implementación de un método alternativo**
+:question: **Pregunta**
 
 Implementa un método alternativo que utilice expresiones regulares para encontrar subcadenas
 entre dos delimitadores.
@@ -478,7 +494,7 @@ Instrucciones:
 
 1. Implementa un método llamado regexSubstringsBetween que use expresiones regulares
    para encontrar subcadenas entre las etiquetas open y close.
-2. Asegúrate de que el método pase las mismas pruebas unitarias que substringsBetween. 
+2. Asegúrate de que el método pase las mismas pruebas unitarias que substringsBetween.
 
 :white_check_mark: **Respuesta**
 
@@ -524,7 +540,9 @@ Clase `StringUtils` con el método `regexSubstringsBetween()`
 
 ## Ejercicio 10: Optimización del método original
 
-:question: **Optimiza el método substringsBetween para mejorar su eficiencia en términos de tiempo y espacio.**
+:question: **Pregunta**
+
+Optimiza el método substringsBetween para mejorar su eficiencia en términos de tiempo y espacio.
 
 Instrucciones:
 
@@ -571,4 +589,3 @@ Clase `StringUtils` con el método `substringsBetween()` optimizado
         return list.toArray(new String[list.size()]);
     }
 ```
-
