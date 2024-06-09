@@ -184,6 +184,23 @@ y (longitud de open > 1, longitud de close > 1) son suficientes.
 
 ¿Encontramos más casos donde se pueda simplificar el número de pruebas?
 
+**Paso 6: Automatiza los casos de prueba**
+
+Ahora es el momento de transformar los casos de prueba en pruebas JUnit automatizadas. Escribir
+esas pruebas es principalmente una tarea mecánica. Cada llamada al método substringsBetween es
+uno de nuestros casos de prueba. Las 21 llamadas a él se distribuyen entre los métodos de prueba,
+cada una de las cuales coincide con los casos de prueba que ideamos anteriormente.
+
+**Paso 7: Ejecuta las pruebas**
+
+Siempre es bueno tener variación en las pruebas. Por ejemplo, cuando revisas las pruebas, nota que
+nunca probamos cadenas con espacios. Entonces se diseñaron dos pruebas adicionales basadas en
+T15 y T20, ambas sobre "str contiene etiquetas open y close varias veces": una para etiquetas open
+y close con longitudes 1, otra para etiquetas open y close con longitudes más grandes. Estos
+verifican si la implementación funciona si hay espacios en blanco en la cadena.
+
+:white_check_mark: **Respuesta**
+
 **Cadena vacia o nula:**
 
 - str es nulo.
@@ -220,20 +237,14 @@ y (longitud de open > 1, longitud de close > 1) son suficientes.
 
 - str contiene las etiquetas de open y close sin caracteres entre ellas.
 
-**Paso 6: Automatiza los casos de prueba**
+## Ejercicio 6
 
-Ahora es el momento de transformar los casos de prueba en pruebas JUnit automatizadas. Escribir
-esas pruebas es principalmente una tarea mecánica. Cada llamada al método substringsBetween es
-uno de nuestros casos de prueba. Las 21 llamadas a él se distribuyen entre los métodos de prueba,
-cada una de las cuales coincide con los casos de prueba que ideamos anteriormente.
+:question: **Pregunta**
 
-**Paso 7: Ejecuta las pruebas**
+Escribe un archivo stringUtilsTest.java y completa el código anterior.
 
-Siempre es bueno tener variación en las pruebas. Por ejemplo, cuando revisas las pruebas, nota que
-nunca probamos cadenas con espacios. Entonces se diseñaron dos pruebas adicionales basadas en
-T15 y T20, ambas sobre "str contiene etiquetas open y close varias veces": una para etiquetas open
-y close con longitudes 1, otra para etiquetas open y close con longitudes más grandes. Estos
-verifican si la implementación funciona si hay espacios en blanco en la cadena.
+Tómate el tiempo para revisar todos los pasos que hemos
+trabajado y luego considera esta pregunta: ¿hemos terminado?.
 
 :white_check_mark: **Respuesta**
 
@@ -316,17 +327,6 @@ verifican si la implementación funciona si hay espacios en blanco en la cadena.
         assertThat(substringsBetween("aabb", "aa", "bb")).isEqualTo(new String[]{""});
     }
 ```
-
-## Ejercicio 6
-
-:question: **Pregunta**
-
-Escribe un archivo stringUtilsTest.java y completa el código anterior.
-
-Tómate el tiempo para revisar todos los pasos que hemos
-trabajado y luego considera esta pregunta: ¿hemos terminado?.
-
-:white_check_mark: **Respuesta**
 
 No hemos terminado. Aunque hemos escrito 23 pruebas, no hemos probado todas las combinaciones
 posibles, ademas podemos realizar mejoras sobre el código para validar errores o validar las salidas de
